@@ -63,7 +63,7 @@ const productsController={
     // VA POR DELETE
     delete: function(req,res){
             let deleteid=req.params.id
-            let newDataBase=dbjs.filter(product=>product.id!=Deleteid)
+            let newDataBase=dbjs.filter(product=>product.id!=deleteid)
             let newdataBaseJS=JSON.stringify(newDataBase, null, '')
             fs.writeFileSync(rutaJSON,newdataBaseJS);
             res.redirect('/products')
